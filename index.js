@@ -53,7 +53,7 @@ let updateView = weather => {
 
   document.querySelector(".js-temperature").textContent = `${Math.round(
     currently.temperature
-  )}`;
+  )}°C`;
   document.querySelector(".js-apparent").textContent = `${Math.round(
     currently.apparentTemperature
   )}° C`;

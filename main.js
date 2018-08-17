@@ -25,9 +25,12 @@ const createTray = () => {
 
 const createWindow = () => {
   window = new BrowserWindow({
-    show: true,
     frame: false,
-    fullscreen: true,
+    resizable: false,
+    // alwaysOnTop: true,
+    width: 800,
+    height: 480,
+    // fullscreen: true,
     icon: path.join(iconDirectory, "if_timeline_2199091.png"),
     webPreferences: {
       //       // Prevents renderer process code from not running when window is

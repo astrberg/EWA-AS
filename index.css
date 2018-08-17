@@ -10,7 +10,7 @@
   background-size: cover;
   --text-color: #dddddd;
   --title-color: white;
-  --font-size: 14px;
+  --font-size: 12px;
   --font-family: "Montserrat", sans-serif;
 }
 
@@ -20,20 +20,15 @@
   width: 1024px;
 } */
 
-/* * {
+* {
   border: 1px solid #f00;
-} */
-
-.toolbar-actions {
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .title {
-  padding: 0.5em;
+  padding: 0.2em;
   position: relative;
 }
+
 
 .window-content {
   background-repeat: no-repeat center center fixed;
@@ -50,51 +45,53 @@
 .js-temperature,
 .celsius,
 .summary {
-  font-size: 10em;
+  font-size: 5em;
   font-family: var(--font-family);
   color: var(--title-color);
   /* text-shadow: 0px 3px 0px rgb(54, 54, 54), 0px 14px 10px rgba(0, 0, 0, 0.15),
     0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1); */
 }
+
+.js-pm_am {
+  position: fixed;
+  margin-left: 1em;
+}
+
 .summary {
-  font-size: 5em;
+  font-size: 2em;
   text-transform: uppercase;
 }
 .js-temperature {
-  font-size: 15em;
+  font-size: 5em;
   letter-spacing: 0.1em;
 }
 
-.js-pm_am {
-  margin-left: 1.5em;
-}
 
 .celsius {
-  font-size: 10em;
+  font-size: 5em;
   letter-spacing: -0.1em;
 }
 
 .js-weather-icon {
   position: fixed;
-  margin-top: -1em;
+  margin-top: 10em;
+  width:"200";
+}
+.left-container {
+  width: 50%;
 }
 
 .left-column {
-  width: 50%;
-  height: 50%;
+ 
   float: left;
   text-align: center;
+
 }
 
-.left-container {
-  position: absolute;
-  width: 50%;
-  margin-left: 5em;
-}
 
 .left-center-container {
   margin-left: 5em;
-  margin-top: 35em;
+  margin-top: 15em;
   background: rgba(0, 0, 0, 0.5);
   width: 50%;
   position: absolute;
@@ -103,23 +100,27 @@
 .left-center-column {
   float: left;
   text-align: center;
-  padding: 2em;
+  padding: 0.4em;
 }
-
-.right-top-container {
-  margin-left: 70em;
-  margin-top: -3em;
-}
-
 .right-container {
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  width: 35%;
-  left: 60em;
-  top: 35em;
+  width: 50%;
 }
 
 .right-column {
+  float: center;
+  text-align: center;
+  
+}
+
+.right-center-container {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 35%;
+  left: 37em;
+  top: 10em;
+}
+
+.right-center-column {
   float: left;
   text-align: center;
   padding: 2em;
