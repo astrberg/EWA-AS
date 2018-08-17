@@ -1,0 +1,141 @@
+/* Variables */
+
+:root {
+  padding: 0;
+  margin: 0;
+  background-color: red;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  --text-color: #dddddd;
+  --title-color: white;
+  --font-size: 14px;
+  --font-family: "Montserrat", sans-serif;
+}
+
+/*Overflow finder! :)*/
+
+/* .slide-content .scroller {
+  width: 1024px;
+} */
+
+/* * {
+  border: 1px solid #f00;
+} */
+
+.toolbar-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.title {
+  padding: 0.5em;
+  position: relative;
+}
+
+.window-content {
+  background-repeat: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: inset 0 50em 45em -35em rgba(0, 0, 0, 0.616);
+  /* inset 0 -50em 10em -35em #172031; */
+}
+
+.js-clock,
+.js-pm_am,
+.js-temperature,
+.celsius,
+.summary {
+  font-size: 10em;
+  font-family: var(--font-family);
+  color: var(--title-color);
+  /* text-shadow: 0px 3px 0px rgb(54, 54, 54), 0px 14px 10px rgba(0, 0, 0, 0.15),
+    0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1); */
+}
+.summary {
+  font-size: 5em;
+  text-transform: uppercase;
+}
+.js-temperature {
+  font-size: 15em;
+  letter-spacing: 0.1em;
+}
+
+.js-pm_am {
+  margin-left: 1.5em;
+}
+
+.celsius {
+  font-size: 10em;
+  letter-spacing: -0.1em;
+}
+
+.js-weather-icon {
+  position: fixed;
+  margin-top: -1em;
+}
+
+.left-column {
+  width: 50%;
+  height: 50%;
+  float: left;
+  text-align: center;
+}
+
+.left-container {
+  position: absolute;
+  width: 50%;
+  margin-left: 5em;
+}
+
+.left-center-container {
+  margin-left: 5em;
+  margin-top: 35em;
+  background: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  position: absolute;
+}
+
+.left-center-column {
+  float: left;
+  text-align: center;
+  padding: 2em;
+}
+
+.right-top-container {
+  margin-left: 70em;
+  margin-top: -3em;
+}
+
+.right-container {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 35%;
+  left: 60em;
+  top: 35em;
+}
+
+.right-column {
+  float: left;
+  text-align: center;
+  padding: 2em;
+  width: 30%;
+}
+
+.reading {
+  font-size: calc(var(--font-size) + 6px);
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+.description {
+  text-transform: uppercase;
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: calc(var(--font-size) - 3px);
+  font-weight: 300;
+}

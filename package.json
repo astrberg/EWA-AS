@@ -1,22 +1,30 @@
 {
-  "name": "electron-quick-start",
+  "name": "electron-weather-app",
+  "productName": "EWA-AS",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
   "main": "main.js",
+  "license": "MIT",
+  "author": "Aron Strandberg",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "gulp": "gulp",
+    "build-darwin": "electron-packager . electron-app --platform=darwin -- icon Icons/if_timeline_2199091.icns --overwrite",
+    "build-mas": "electron-packager . electron-app --platform=mas --icon Icons/if_timeline_2199091.icns --overwrite",
+    "build-linux": "electron-packager . electron-app --platform=linux --icon Icons/if_timeline_2199091.png --overwrite",
+    "build-win32": "electron-packager . electron-app --platform=win32 --icon Icons/if_timeline_2199091.ico --overwrite",
+    "build": "npm run build-darwin && npm run build-mas && npm run build-linux && npm run build-win32"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "electron": "^1.6.8",
+    "electron-connect": "^0.6.3",
+    "electron-packager": "^12.1.0",
+    "prettier-eslint": "^8.8.2"
+  },
+  "dependencies": {
+    "electron-reload": "^1.2.5",
+    "eslint": "^5.2.0",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "jquery": "^3.3.1"
   }
 }

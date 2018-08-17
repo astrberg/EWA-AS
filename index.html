@@ -1,19 +1,149 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+<html lang="en">
 
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Weather</title>
+  <link rel="stylesheet" href="./vendor/css/photon.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="./index.css" media="screen" charset="utf-8">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+  <script charset="utf-8">
+    window.$ = window.jQuery = require('jquery')
+    require('./index.js')
+    require('./clock.js')
+    require('electron-connect').client.create()
+  </script>
+</head>
+
+<body>
+
+  <div class="window">
+    <header class="toolbar toolbar-header">
+      <h1 class="title">The Weather
+        <span class="js-update-time"></span> in
+        <span class="js-get-location"></span> by
+        <a href="http://forecast.io">Forecast</a>
+      </h1>
+      <div class="toolbar-actions">
+
+        <button class="btn btn-default js-quit-action">
+          <span class="icon icon-cancel js-quit-action" title="Quit"></span>
+        </button>
+
+
+    </header>
+
+    <div class="window-content">
+      <div class="left-container">
+        <div class="left-column">
+          <div class="js-clock"></div>
+        </div>
+        <div class="left-column">
+          <div class="js-pm_am"></div>
+        </div>
+        <div class="left-column">
+          <div class="summary js-summary">Loading&hellip;</div>
+        </div>
+        <div>
+          <div class="left-column">
+            <div class="js-weather-icon">
+              <img id="main-icon" src="" width="200">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="left-center-container">
+
+        <div class="left-center-column">
+          <div class="reading js-nextday1">&nbsp;</div>
+          <img id="icon1" src="//:0" width="50">
+          <div id="desc1" class="description"></div>
+        </div>
+        <div class="left-center-column">
+          <div class="reading js-nextday2">&nbsp;</div>
+          <img id="icon2" src="//:0" width="50">
+          <div id="desc2" class="description"></div>
+        </div>
+        <div>
+          <div class="left-center-column">
+            <div class="reading js-nextday3">&nbsp;</div>
+            <img id="icon3" src="//:0" width="50">
+            <div id="desc3" class="description"></div>
+          </div>
+          <div class="left-center-column">
+            <div class="reading js-nextday4">&nbsp;</div>
+            <img id="icon4" src="//:0" width="50">
+            <div id="desc4" class="description"></div>
+          </div>
+          <div class="left-center-column">
+            <div class="reading js-nextday5">&nbsp;</div>
+            <img id="icon5" src="//:0" width="50">
+            <div id="desc5" class="description"></div>
+          </div>
+
+          <div class="left-center-column">
+            <div class="reading js-nextday6">&nbsp;</div>
+            <img id="icon6" src="//:0" width="50">
+            <div id="desc6" class="description"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="right-top-container">
+        <div class="js-temperature"></div>
+
+      </div>
+      <div class="celsius">° C</div>
+      <div class="right-container">
+
+        <div class="right-column">
+          <div class="reading js-apparent">&nbsp;</div>
+          <div class="description">feels like</div>
+        </div>
+
+
+        <div class="right-column">
+          <div class="reading js-wind">&nbsp;</div>
+          <div class="description">wind speed</div>
+        </div>
+
+        <div>
+          <div class="right-column">
+            <div class="reading reading js-humidity">&nbsp;</div>
+            <div class="description">humidity</div>
+          </div>
+
+
+          <div class="right-column">
+            <div class="reading js-cloud-cover">&nbsp;</div>
+            <div class="description">cloud cover</div>
+          </div>
+
+
+          <div class="right-column">
+            <div class="reading js-ozone">&nbsp;</div>
+            <div class="description">ozone</div>
+          </div>
+
+          <div class="right-column">
+            <div class="reading js-uvIndex">&nbsp;</div>
+            <div class="description">uv index</div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+    </div>
+</body>
+
 </html>
