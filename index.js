@@ -43,7 +43,7 @@ let updateView = weather => {
     "url(img/" + currently.icon.toLocaleString() + ".jpg)";
 
   document.querySelector(".js-summary").textContent = currently.summary;
-  document.getElementById("main-icon").src =
+  document.getElementById("js-weather-icon").src =
     "weatherIcons/" + currently.icon + ".png";
 
   document.querySelector(".js-update-time").textContent = `at ${new Date(

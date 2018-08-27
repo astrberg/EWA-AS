@@ -20,9 +20,9 @@
   width: 1024px;
 } */
 
-* {
+/* * {
   border: 1px solid #f00;
-}
+} */
 
 .title {
   padding: 0.2em;
@@ -53,29 +53,31 @@
 }
 
 .js-pm_am {
-  position: fixed;
-  margin-left: 1em;
+  
+  margin-left: 4em;
 }
 
 .summary {
   font-size: 2em;
   text-transform: uppercase;
+  top: 5em;
+  left: 1em;
+  position: absolute;
+
 }
 .js-temperature {
-  font-size: 5em;
+  font-size: 9em;
   letter-spacing: 0.1em;
+  /* margin-top: 0.1em; */
 }
 
 
-.celsius {
-  font-size: 5em;
-  letter-spacing: -0.1em;
-}
-
-.js-weather-icon {
+#js-weather-icon {
   position: fixed;
-  margin-top: 10em;
-  width:"200";
+  margin-top: 5em;
+  left: 12em;
+  max-width: 30%;
+  max-height: 30%;
 }
 .left-container {
   width: 50%;
@@ -85,13 +87,14 @@
  
   float: left;
   text-align: center;
-
+  margin-left: 3em;
+  position: absolute;
 }
 
 
 .left-center-container {
-  margin-left: 5em;
-  margin-top: 15em;
+  margin-left: 1em;
+  margin-top: 18em;
   background: rgba(0, 0, 0, 0.5);
   width: 50%;
   position: absolute;
@@ -115,16 +118,18 @@
 .right-center-container {
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  width: 35%;
-  left: 37em;
-  top: 10em;
+  margin-left: 2em;
+  margin-right: 1em;
+  margin-top: 1em;
+  padding: 2em;
 }
 
 .right-center-column {
   float: left;
   text-align: center;
-  padding: 2em;
-  width: 30%;
+  width: 50%; 
+  left: 0;
+  right: 0;
 }
 
 .reading {
